@@ -53,7 +53,7 @@
 
         function computerMovement(){
             var paddle2YCenter = paddle2Y + (PADDLE_HEIGHT/2);
-            if(paddle2YCenter < ballY-35){
+            if(paddle2YCenter < ballY - 35){
                 paddle2Y += 6;
             } else if (paddle2YCenter > ballY+35){
                 paddle2Y -= 6;
@@ -71,8 +71,8 @@
                 if(ballY > paddle1Y && 
                     ballY < paddle1Y+PADDLE_HEIGHT){
                         ballSpeedX = -ballSpeedX;
-                        // var deltaY = ballSpeedY - (paddle1Y + PADDLE_HEIGHT/2);
-                        // ballSpeedY = deltaY * 0.35;
+                        var deltaY = ballY -(paddle1Y + PADDLE_HEIGHT/2);
+                        ballSpeedY = deltaY * 0.35;
                     }
                 else {
                     ballReset();
@@ -85,8 +85,8 @@
                 if(ballY > paddle2Y && 
                     ballY < paddle2Y+PADDLE_HEIGHT){
                         ballSpeedX = -ballSpeedX;
-                        // var deltaY = ballSpeedY - (paddle2Y + PADDLE_HEIGHT/2);
-                        // ballSpeedY = deltaY * 0.35;
+                        var deltaY = ballY - (paddle2Y + PADDLE_HEIGHT/2);
+                        ballSpeedY = deltaY * 0.35;
                     }
                 else {
                     ballReset();
