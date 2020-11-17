@@ -71,6 +71,8 @@
                 if(ballY > paddle1Y && 
                     ballY < paddle1Y+PADDLE_HEIGHT){
                         ballSpeedX = -ballSpeedX;
+                        // var deltaY = ballSpeedY - (paddle1Y + PADDLE_HEIGHT/2);
+                        // ballSpeedY = deltaY * 0.35;
                     }
                 else {
                     ballReset();
@@ -83,6 +85,8 @@
                 if(ballY > paddle2Y && 
                     ballY < paddle2Y+PADDLE_HEIGHT){
                         ballSpeedX = -ballSpeedX;
+                        // var deltaY = ballSpeedY - (paddle2Y + PADDLE_HEIGHT/2);
+                        // ballSpeedY = deltaY * 0.35;
                     }
                 else {
                     ballReset();
@@ -112,7 +116,8 @@
             //Ball
             colorCircle(ballX, ballY, 10,'white');
 
-            canvasContext.fillText("Score", 100, 100);
+            canvasContext.fillText(player1Score, 100, 100);
+            canvasContext.fillText(player2Score, canvas.width-100, 100);
         }
 
         function colorCircle(centerX, centerY, radius, drawColor) {
