@@ -88,8 +88,6 @@
             ballX += ballSpeedX;
             ballY += ballSpeedY;
 
-            drawNet();
-
             //Pass left side
             if (ballX < 0) {
                 if(ballY > paddle1Y && 
@@ -149,6 +147,9 @@
                 return
             }
             
+            //Draws aesthetic lines to divide screen into 2 sections
+            drawNet();
+
             //Left Paddle
             colorRect(0, paddle1Y, PADDLE_THICKNESS, PADDLE_HEIGHT, "white");
 
